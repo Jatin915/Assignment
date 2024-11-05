@@ -1,13 +1,12 @@
 #include <stdio.h>
 
 void decimalToHexadecimal(int decimal) {
-    char hex[20];  // array to store hex digits (enough for large numbers)
+    char hex[20];  // array to store hex digits
     int i = 0;
 
     while (decimal != 0) {
         int remainder = decimal % 16;
-
-        // Convert remainder to hex digit
+        
         if (remainder < 10) {
             hex[i] = 48 + remainder;  // 48 is ASCII for '0'
         } else {
